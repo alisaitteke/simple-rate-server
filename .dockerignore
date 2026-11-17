@@ -1,0 +1,5 @@
+.git
+bin
+*.out
+.DS_Store
+config.yaml

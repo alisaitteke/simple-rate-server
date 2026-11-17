@@ -1,0 +1,25 @@
+# All keys are optional. These mirror the built-in defaults.
+port: 8080
+bind: ""            # "" = all interfaces
+sources: [ecb, erapi, tcmb, binance, coinbase, coingecko, fawazahmed]
+fiat: ["*"]         # "*" = every fiat in the embedded catalogue
+crypto: [BTC, ETH, USDT, USDC, SOL, XRP, ADA, DOGE, AVAX, DOT, BNB, LTC]
+
+poll_market: 30s
+poll_tcmb: 1h
+poll_fiat: 6h
+poll_coingecko: 5m
+poll_fawaz: 12h
+
+stale_market: 5m
+stale_official: 96h
+stale_aggregator: 48h
+startup_timeout: 15s
+
+strategy: priority      # priority | max | min | avg | median
+strategy_fiat: ""       # "" inherits strategy
+strategy_crypto: ""     # "" inherits strategy
+
+log_format: json    # json | text
+log_level: info     # debug | info | warn | error
+cors: true
